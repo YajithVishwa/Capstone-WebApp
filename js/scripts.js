@@ -32,3 +32,10 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+function validate() {
+    var parent= document.getElementById("score");
+    parent.innerHTML="";
+    var child = document.createElement("div");
+    child.innerHTML = "<div class='TxtTile'>Similarity</div><div class='pInfo'>25%</div>";
+    parent.appendChild(child);
+  }
