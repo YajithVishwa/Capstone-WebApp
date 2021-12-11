@@ -33,6 +33,37 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 function validate() {
+    var student_ans=document.getElementById("studenttextarea").value;
+    var given_ans=document.getElementById("keytextarea").value;
+    var mark=document.getElementById("scoretext").value;
+    if(student_ans==""||given_ans==""||mark=="")
+    {
+        return false;
+    }
+    var data={
+        "student_ans":student_ans,
+        "given_ans":given_ans,
+        "mark":mark
+    };
+    let options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 
+                'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(data)
+    }
+    let fetchRes = fetch(
+        "http://dummy.restapiexample.com/api/v1/create", 
+                                                options);
+                fetchRes.then(res =>
+                    res.json()).then(d => {
+                        const obj = JSON.parse(d);
+                        
+                        console.log(d)
+                    })
+
+
     var parent= document.getElementById("score");
     parent.innerHTML="";
     var child = document.createElement("div");

@@ -135,8 +135,13 @@
                             <label for="keytextarea">Answer Key</label>
                             <textarea class="form-control" id="keytextarea" rows="3" required></textarea>
                           </div>
-                          <br><br>  
-                          <button type="submit" class="btn btn-primary" onclick="validate()">Validate</button>
+                          <br>
+                          <div class="form-group">
+                            <label for="scoretext">Mark</label>
+                            <input type="number" class="form-control" id="scoretext" maxlength="100" placeholder="Enter Mark for this Question" required>
+                          </div>
+                          <br>  
+                          <button type="button" class="btn btn-primary" onclick="validate()">Validate</button>
                           <br><br>
                           <div id="score"></div>
                     </form>
