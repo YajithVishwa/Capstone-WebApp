@@ -135,12 +135,23 @@
                             <label for="keytextarea">Answer Key</label>
                             <textarea class="form-control" id="keytextarea" rows="3" required></textarea>
                           </div>
+                          <br>  
+                          <div class="form-group">
+                            <label for="method">Methods</label>
+                            <select class="form-select" size="3" id="method" aria-label="Methods">
+                                <option value="word2vec" selected>Word to Vector</option>
+                                <option value="doc2vec">Document to Vector</option>
+                                
+                              </select>
+                          </div>
                           <br>
                           <div class="form-group">
                             <label for="scoretext">Mark</label>
-                            <input type="number" class="form-control" id="scoretext" maxlength="100" placeholder="Enter Mark for this Question" required>
+                            <input type="number" class="form-control" id="scoretext" value="1" min="1" max="100" maxlength="100" placeholder="Enter Mark for this Question" required>
                           </div>
-                          <br>  
+                          
+                          
+                          <br>
                           <button type="button" class="btn btn-primary" onclick="validate()">Validate</button>
                           <br><br>
                           <div id="score"></div>

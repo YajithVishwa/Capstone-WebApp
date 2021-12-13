@@ -36,6 +36,7 @@ function validate() {
     var student_ans=document.getElementById("studenttextarea").value;
     var given_ans=document.getElementById("keytextarea").value;
     var mark=document.getElementById("scoretext").value;
+    var method=document.getElementById("method").value;
     if(student_ans==""||given_ans==""||mark=="")
     {
         return false;
@@ -43,7 +44,8 @@ function validate() {
     var data={
         "student_ans":student_ans,
         "given_ans":given_ans,
-        "mark":mark
+        "mark":mark,
+        "method":method
     };
     let options = {
         method: 'POST',
